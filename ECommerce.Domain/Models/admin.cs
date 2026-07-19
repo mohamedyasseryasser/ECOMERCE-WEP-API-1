@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ECommerce.Domain.Models
+{
+    public class admin
+    {
+        [Key]
+        public int Adminid {  get; set; }
+        [ForeignKey("user")]
+        public string? user_id { get; set; }
+        public applicationuser? user { get; set; }
+        [Required]
+        public string role {  get; set; }
+        [Required]
+        public string permission {  get; set; }
+    }
+}

@@ -1,0 +1,13 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ECommerce.Domain.DTOs.Cart.cartdto
+{
+    public class updatecartitem
+    {
+        [Required]
+        public int cartitem {  get; set; }
+        [Required]
+        [Range(1, 100, ErrorMessage = "Quantity must be between 1 and 100")]
+        public int newquantity {  get; set; }
+    }
+}
